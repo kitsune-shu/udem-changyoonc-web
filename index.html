@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chang Yoon (Yoon) Chung — Portfolio</title>
+  <meta name="description" content="Portfolio and CV of Chang Yoon (Yoon) Chung: MSc student in Applied Mathematics at Université de Montréal; research in mathematical & computational biology." />
+  <meta name="author" content="Chang Yoon (Yoon) Chung" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chang Yoon (Yoon) Chung — Portfolio" />
+  <meta property="og:description" content="MSc student in Applied Mathematics; research in stochastic modeling, transcriptional regulation, and spatiotemporal PDEs." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #111317;
+      --text: #e6e8ef;
+      --muted: #a7adbb;
+      --accent: #7c9cff;
+      --accent-2: #7fffd4;
+      --border: #1f2330;
+      --shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f7f8fc; --card:#ffffff; --text:#14161a; --muted:#4a5568; --accent:#3b82f6; --accent-2:#059669; --border:#e5e7eb; --shadow: 0 8px 24px rgba(2,6,23,.08);}  
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body { margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background: radial-gradient(1200px 600px at 10% -10%, rgba(124,156,255,.12), transparent), radial-gradient(1000px 500px at 110% -20%, rgba(127,255,212,.10), transparent), var(--bg); }
+
+    .wrap { max-width: 1024px; margin: 0 auto; padding: 24px; }
+
+    header { position: sticky; top:0; z-index: 50; background: linear-gradient(to bottom, rgba(0,0,0,.55), transparent); backdrop-filter: blur(6px); }
+    nav { display:flex; gap: 16px; align-items:center; justify-content:space-between; padding: 14px 24px; border-bottom: 1px solid var(--border); }
+    nav .links { display:flex; flex-wrap:wrap; gap: 12px; }
+    nav a { color: var(--text); text-decoration:none; opacity:.9; padding:6px 10px; border-radius: 10px; }
+    nav a:hover { background: var(--card); box-shadow: var(--shadow); }
+
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: center; padding: 48px 24px 8px; }
+    .hero-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 28px; box-shadow: var(--shadow); }
+    h1 { font-size: clamp(28px, 4.2vw, 44px); margin: 0 0 12px; letter-spacing:.2px; }
+    .subtitle { color: var(--muted) }
+    .badges { margin-top: 14px; display:flex; flex-wrap:wrap; gap:8px }
+    .badge { font-size: 12px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; background: linear-gradient(180deg, rgba(124,156,255,.14), rgba(124,156,255,.04)); }
+    .cta { margin-top: 18px; display:flex; flex-wrap:wrap; gap: 10px }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); text-decoration:none; color:var(--text); background: linear-gradient(180deg, rgba(127,255,212,.18), rgba(127,255,212,.06)); box-shadow: var(--shadow); }
+    .btn.secondary { background: linear-gradient(180deg, rgba(124,156,255,.16), rgba(124,156,255,.06)); }
+
+    .section { padding: 28px 24px; }
+    .section h2 { font-size: clamp(20px, 2.6vw, 28px); margin: 0 0 12px; }
+    .grid { display:grid; gap: 16px; }
+    .cards { display:grid; gap: 12px; grid-template-columns: repeat(12, 1fr); }
+    .card { grid-column: span 12; background: var(--card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow: var(--shadow); }
+    @media (min-width: 720px) {
+      .card.span-6 { grid-column: span 6; }
+      .card.span-4 { grid-column: span 4; }
+      .card.span-8 { grid-column: span 8; }
+    }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 6px; }
+    .title { font-weight: 600; }
+    .list { margin: 8px 0 0 18px; }
+    .list li { margin: 6px 0; }
+    .kicker { font-size: 12px; letter-spacing:.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+
+    footer { padding: 40px 24px; color: var(--muted); text-align:center; }
+
+    .pill { display:inline-block; padding: 2px 8px; border-radius:999px; background: rgba(124,156,255,.12); border:1px solid var(--border); font-size: 12px; margin-left: 4px; }
+
+    /* Print */
+    @media print {
+      nav, .cta { display: none !important; }
+      body { background: #fff; color:#000 }
+      .hero, .section, .cards, .card { box-shadow:none; background:#fff; border-color:#ccc }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <strong>Yoon Chung</strong>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#talks">Talks</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="hero">
+      <div class="hero-card">
+        <h1>Chang Yoon (Yoon) Chung</h1>
+        <p class="subtitle">MSc Student in Applied Mathematics @ Université de Montréal · Mathematical & Computational Biology</p>
+        <div class="badges">
+          <span class="badge">Stochastic Modeling</span>
+          <span class="badge">Transcriptional Regulation</span>
+          <span class="badge">Spatiotemporal PDEs</span>
+          <span class="badge">Python & Scientific Computing</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="mailto:cy.ch0619@gmail.com">Email me</a>
+          <a class="btn secondary" href="#publications">View Publications</a>
+          <a class="btn secondary" href="./Curriculum%20Vitae.pdf">Download CV (PDF)</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card span-6">
+          <div class="kicker">Education</div>
+          <div class="title">Université de Montréal <span class="pill">2025–2027 (expected)</span></div>
+          <div class="meta">MSc in Applied Mathematics · Supervised by Prof. David McLeod · Funded (GRA & Tuition Exemption)</div>
+        </div>
+        <div class="card span-6">
+          <div class="kicker">Education</div>
+          <div class="title">University of Alberta <span class="pill">2021–2024</span></div>
+          <div class="meta">BSc in Mathematics (minor in Computing Science) · Graduation with Distinction</div>
+        </div>
+        <div class="card span-12">
+          <div class="kicker">Areas of Interest</div>
+          <div class="meta">Noise in gene regulation · Ultrasensitivity · Biochemical reaction networks · Biological oscillators (circadian, p53–MDM2) · Learning from spatiotemporal simulations</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="cards">
+        <article class="card span-12">
+          <div class="title">MSc Candidate; Graduate Student Researcher — Université de Montréal</div>
+          <div class="meta">Aug 2025 – Present</div>
+          <ul class="list">
+            <li>Supervised by Prof. David McLeod; collaborating with the Morgan Craig group.</li>
+            <li>Coursework toward computational/mathematical biology.</li>
+            <li>Working on the revision of <em>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</em> (PLOS Computational Biology).</li>
+          </ul>
+        </article>
+        <article class="card span-12">
+          <div class="title">Undergraduate Researcher — IBS, Biomedical Mathematics Group (BIMAG)</div>
+          <div class="meta">Jul 2024 – Aug 2025</div>
+          <ul class="list">
+            <li>Advised by Prof. Jae Kyoung Kim (KAIST) and Prof. Eui Min Jeong (Inha University).</li>
+            <li>First-author preprint on bioRxiv; under revision at PLOS Computational Biology.</li>
+            <li>Investigated Fano factor discrepancies across transcriptional regulatory systems and components that trigger unexpected activation/repression.</li>
+            <li>Studied how multiple repression mechanisms generate robust rhythms/noise in oscillators (circadian, p53–MDM2).</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">FX Technical Director Intern — Sony Pictures Imageworks</div>
+          <div class="meta">Jul 2022 – Aug 2022</div>
+          <ul class="list">
+            <li>Worked on Netflix film <em>In Your Dreams</em> (2025).</li>
+            <li>Applied vector calculus & linear algebra to particle and fluid simulations; procedural control with Python and studio tools.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">Research Assistant — Korea Institute of Science and Technology Information (KISTI)</div>
+          <div class="meta">Sep 2020 – Dec 2020</div>
+          <ul class="list">
+            <li>Global market research during COVID-19; analysis of facial mask overproduction/waste.</li>
+            <li>Data collection, reports, presentations; Python for data processing.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">Calculus & Linear Algebra Tutor</div>
+          <div class="meta">Jun 2023 – Sep 2023</div>
+        </article>
+        <article class="card span-6">
+          <div class="title">English Tutor</div>
+          <div class="meta">Feb 2021 – Nov 2021</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Publications & Preprints</h2>
+      <div class="cards">
+        <article class="card span-12">
+          <div class="title">How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses (2025) <span class="pill">Preprint</span></div>
+          <div class="meta">Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung Kim ( * co-first authors )</div>
+          <ul class="list">
+            <li>bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank" rel="noopener">10.1101/2025.06.12.659288v1</a> · Under review at PLOS Computational Biology</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Research & Projects</h2>
+      <div class="cards">
+        <article class="card span-6">
+          <div class="title">How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</div>
+          <div class="meta">IBS BIMAG · 2024–2025</div>
+          <ul class="list">
+            <li>Presented at IBS BIMAG Winter 2024 Workshop.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">Validity of Stochastic Quasi-Steady State Approximation</div>
+          <div class="meta">Université de Montréal · 2025 (ongoing)</div>
+          <ul class="list">
+            <li>Analysis of QSSA techniques in complex stochastic biological models.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">Parameter Estimation from Spatiotemporal PDE Tumor Simulations</div>
+          <div class="meta">Université de Montréal · 2025 (ongoing)</div>
+          <ul class="list">
+            <li>Dimensionality reduction & supervised classification for sequenced 2D data.</li>
+          </ul>
+        </article>
+        <article class="card span-6">
+          <div class="title">Cell Division and Its Stochastic Model</div>
+          <div class="meta">University of Alberta · 2024</div>
+        </article>
+        <article class="card span-6">
+          <div class="title">Netflix 3D Animation Film, “In Your Dreams”</div>
+          <div class="meta">Sony Pictures Imageworks · 2022</div>
+          <ul class="list">
+            <li>FX TD intern; particle & fluid dynamics simulation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="talks" class="section">
+      <h2>Talks & Presentations</h2>
+      <div class="cards">
+        <article class="card span-6">
+          <div class="title">How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</div>
+          <div class="meta">IBS BIMAG Winter Workshop 2024 · Jeonju, South Korea</div>
+        </article>
+        <article class="card span-6">
+          <div class="title">How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</div>
+          <div class="meta">Morgan Craig Lab Meeting · Montréal, Canada (2025; expected)</div>
+        </article>
+        <article class="card span-6">
+          <div class="title">Cell Division and Its Stochastic Model</div>
+          <div class="meta">Mathematical Modelling in Biology · University of Alberta (2024)</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="honors" class="section">
+      <h2>Honors & Awards</h2>
+      <div class="cards">
+        <div class="card span-4"><div class="title">Bourse d’exemption UdeM</div><div class="meta">Université de Montréal · 2025</div></div>
+        <div class="card span-4"><div class="title">Graduation with Distinction</div><div class="meta">University of Alberta · 2024</div></div>
+        <div class="card span-4"><div class="title">Dean’s Honor Roll</div><div class="meta">University of Alberta · 2024</div></div>
+        <div class="card span-4"><div class="title">Undergraduate Leadership Award</div><div class="meta">University of Alberta · 2023</div></div>
+        <div class="card span-4"><div class="title">Undergraduate Leadership Award</div><div class="meta">University of Alberta · 2022</div></div>
+        <div class="card span-4"><div class="title">Academic/Achievement Scholarship</div><div class="meta">Savannah College of Art and Design · 2018</div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="cards">
+        <div class="card span-8">
+          <div class="title">Get in touch</div>
+          <ul class="list">
+            <li>Email: <a href="mailto:cy.ch0619@gmail.com">cy.ch0619@gmail.com</a></li>
+            <li>Phone (CA): <a href="tel:+17802783128">+1 (780) 278-3128</a></li>
+            <li>Phone (KOR): <a href="tel:+821090683128">+82 10-9068-3128</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Chang Yoon (Yoon) Chung · Built with semantic HTML & vanilla CSS</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chang Yoon (Yoon) Chung",
+    "email": "mailto:cy.ch0619@gmail.com",
+    "url": "",
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Université de Montréal"},
+      {"@type": "CollegeOrUniversity", "name": "University of Alberta"}
+    ],
+    "knowsAbout": ["Applied Mathematics", "Stochastic Processes", "Mathematical Biology", "Gene Regulation", "Spatiotemporal PDEs"],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Graduate Student Researcher",
+      "occupationLocation": {"@type": "City", "name": "Montréal"}
+    }
+  }
+  </script>
+</body>
+</html>
