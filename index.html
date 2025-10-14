@@ -78,12 +78,11 @@
       box-shadow: var(--shadow);
       padding: 40px;
       backdrop-filter: blur(6px);
-      transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+      transition: box-shadow 0.3s ease, border 0.3s ease;
     }
     .profile-box:hover {
       border: 1px solid var(--accent-light);
       box-shadow: 0 0 25px rgba(92,174,255,0.35);
-      transform: translateY(-8px);
     }
 
     .profile-photo { flex: 0 0 280px; display: flex; align-items: center; justify-content: center; }
@@ -94,10 +93,9 @@
       border-radius: 10px;
       border: 2px solid var(--accent);
       box-shadow: 0 0 22px rgba(92,174,255,0.45);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
     .profile-photo img:hover {
-      transform: scale(1.03);
       box-shadow: 0 0 35px rgba(92,174,255,0.75);
     }
 
@@ -139,12 +137,11 @@
       padding: 20px 24px;
       margin-bottom: 20px;
       backdrop-filter: blur(6px);
-      transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease; /* same speed */
+      transition: box-shadow 0.3s ease, border 0.3s ease;
     }
     .card:hover {
       border: 1px solid var(--accent-light);
       box-shadow: 0 0 25px rgba(92,174,255,0.35);
-      transform: translateY(-8px); /* same as profile-box */
     }
 
     h2 { color: var(--accent-light); font-size: 26px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(92,174,255,0.3); }
