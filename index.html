@@ -27,6 +27,7 @@
       color: var(--text);
       line-height: 1.6;
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -34,7 +35,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.7); /* adjust transparency */
+      background: rgba(255, 255, 255, 0.9);
       z-index: -1;
     }
 
@@ -57,9 +58,15 @@
       padding: 16px 24px;
     }
 
-    nav strong { font-size: 18px; color: var(--accent); }
+    nav strong {
+      font-size: 18px;
+      color: var(--accent);
+    }
 
-    nav .links { display: flex; gap: 20px; }
+    nav .links {
+      display: flex;
+      gap: 20px;
+    }
 
     nav a {
       color: var(--text);
@@ -68,15 +75,22 @@
       transition: color 0.3s ease;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover {
+      color: var(--accent);
+    }
 
-    .section { max-width: 1100px; margin: 60px auto; padding: 0 24px; }
+    .section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
 
+    /* ===== PROFILE + EDUCATION ===== */
     .profile-grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 40px;
-      align-items: start;
+      align-items: stretch; /* ✅ make both columns equal height */
     }
 
     .profile-box {
@@ -84,6 +98,9 @@
       border-radius: 20px;
       box-shadow: var(--shadow);
       padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .profile-box img {
@@ -101,7 +118,10 @@
       color: var(--text);
     }
 
-    .profile-content p { color: var(--muted); margin-top: 8px; }
+    .profile-content p {
+      color: var(--muted);
+      margin-top: 8px;
+    }
 
     .interests {
       margin-top: 16px;
@@ -109,7 +129,11 @@
       color: var(--muted);
     }
 
-    .btns { margin-top: 20px; display: flex; gap: 12px; }
+    .btns {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
 
     .btn {
       display: inline-block;
@@ -131,6 +155,7 @@
     .education-column {
       display: flex;
       flex-direction: column;
+      justify-content: space-between; /* ✅ distribute evenly vertically */
       gap: 20px;
     }
 
@@ -142,10 +167,23 @@
       padding: 20px 24px;
     }
 
-    .edu-card h3 { margin-top: 0; color: var(--text); }
-    .edu-meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+    .edu-card h3 {
+      margin-top: 0;
+      color: var(--text);
+    }
 
-    h2 { color: var(--accent); font-size: 26px; margin-bottom: 20px; }
+    .edu-meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* ===== GENERAL SECTIONS ===== */
+    h2 {
+      color: var(--accent);
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
 
     .card {
       background: var(--card);
@@ -156,8 +194,16 @@
       margin-bottom: 20px;
     }
 
-    .card h3 { margin-top: 0; color: var(--text); }
-    .meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+    .card h3 {
+      margin-top: 0;
+      color: var(--text);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
     .honor-grid {
       display: grid;
@@ -194,20 +240,22 @@
     <section id="about" class="section">
       <div class="profile-grid">
         <div class="profile-box">
-          <img src="profile.JPG" alt="Profile Photo" />
-          <div class="profile-content">
-            <h1>Chang Yoon (Yoon) Chung</h1>
-            <p>MSc Student in Applied Mathematics @ Université de Montréal · Mathematical & Computational Biology</p>
-            <ul class="interests">
-              <li>Stochastic modeling of gene regulation</li>
-              <li>Noise and ultrasensitivity in biochemical networks</li>
-              <li>Spatiotemporal PDE modeling in biology</li>
-              <li>Computational methods in systems biology</li>
-            </ul>
-            <div class="btns">
-              <a class="btn" href="mailto:cy.ch0619@gmail.com">Email Me</a>
-              <a class="btn" href="Curriculum%20Vitae.pdf" target="_blank">Download CV</a>
+          <div>
+            <img src="profile.JPG" alt="Profile Photo" />
+            <div class="profile-content">
+              <h1>Chang Yoon (Yoon) Chung</h1>
+              <p>MSc Student in Applied Mathematics @ Université de Montréal · Mathematical & Computational Biology</p>
+              <ul class="interests">
+                <li>Stochastic modeling of gene regulation</li>
+                <li>Noise and ultrasensitivity in biochemical networks</li>
+                <li>Spatiotemporal PDE modeling in biology</li>
+                <li>Computational methods in systems biology</li>
+              </ul>
             </div>
+          </div>
+          <div class="btns">
+            <a class="btn" href="mailto:cy.ch0619@gmail.com">Email Me</a>
+            <a class="btn" href="Curriculum%20Vitae.pdf" target="_blank">Download CV</a>
           </div>
         </div>
 
@@ -309,7 +357,10 @@
   <footer>
     © <span id="year"></span> Chang Yoon (Yoon) Chung
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
