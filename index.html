@@ -21,8 +21,8 @@
 
     /* === Background setup === */
     html {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('background_2.jpg') no-repeat center center fixed;
+      background-size: scroll;
     }
 
     body {
@@ -208,6 +208,14 @@
       text-shadow: 0 0 10px rgba(92,174,255,0.3);
     }
 
+    .subheading {
+      margin: 28px 0 12px;
+      font-weight: 700;
+      color: var(--accent-light);
+      letter-spacing: .02em;
+      text-shadow: 0 0 8px rgba(92,174,255,0.25);
+    }
+
     .card h3 { color: var(--accent-light); margin-top: 0; }
     .meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
 
@@ -288,16 +296,16 @@
       <div class="links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
+        <a href="#publications">Publications & Preprints</a>
+        <a href="#projects">Research & Projects</a>
         <a href="#presentations">Presentations</a>
-        <a href="#honors">Honors</a>
+        <a href="#honors">Honors & Awards</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- ===== About Section ===== -->
+    <!-- ===== About Section (unchanged structure; your text) ===== -->
     <section id="about" class="section">
       <div class="profile-box">
         <div class="profile-photo">
@@ -335,79 +343,160 @@
       </div>
     </section>
 
-    <!-- ===== Publications ===== -->
-    <section id="publications" class="section">
-      <h2>Publications & Preprints</h2>
-      <div class="card">
-        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses (2025)</h3>
-        <div class="meta">Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung Kim (* co-first authors)</div>
-        <p>bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank">10.1101/2025.06.12.659288v1</a> · Under review at PLOS Computational Biology</p>
-      </div>
-    </section>
-
-    <!-- ===== Experience ===== -->
+    <!-- ===== Experience with subheadings (verbatim text) ===== -->
     <section id="experience" class="section">
       <h2>Experience</h2>
+
+      <div class="subheading">PROFESSIONAL EXPERIENCES</div>
+
       <div class="card">
-        <h3>MSc Student · Graduate Student Researcher — Université de Montréal</h3>
-        <div class="meta">Aug 2025 – Present</div>
+        <h3>MSc Candidate; Graduate student Researcher – August 2025 ~ Present</h3>
+        <div class="meta">Université de Montréal</div>
         <ul>
-          <li>Supervised by Prof. David McLeod; collaborating with the Morgan Craig group.</li>
-          <li>Coursework toward computational/mathematical biology.</li>
-          <li>Working on revision of <em>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</em>.</li>
+          <li>Supervised by Professor David McLeod</li>
+          <li>Participating in weekly lab meetings at Professor Morgan Craig’s research group</li>
+          <li>Taking coursework required for computational/mathematical biology research</li>
+          <li>Currently working on the revision of “How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”, for PLOS Computational Biology</li>
         </ul>
       </div>
+
       <div class="card">
-        <h3>Undergraduate Researcher — IBS, Biomedical Mathematics Group (BIMAG)</h3>
-        <div class="meta">Jul 2024 – Aug 2025</div>
+        <h3>Undergraduate Researcher – July 2024 ~ August 2025</h3>
+        <div class="meta">Institute for Basic Science (IBS), Biomedical Mathematics Group (BIMAG)</div>
         <ul>
-          <li>Supervised by Prof. Jae Kyoung Kim (KAIST) and Prof. Eui Min Jeong (Inha University).</li>
-          <li>First-author preprint on bioRxiv; under revision at PLOS Computational Biology.</li>
-          <li>Investigated Fano factor discrepancies across transcriptional regulatory systems.</li>
+          <li>Worked on research projects under Professor Jae Kyoung Kim (KAIST), and Professor Eui min Jeong (Inha University)</li>
+          <li>First author publication of “How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses” on bioRxiv (PLOS Computational Biology, under revision)</li>
+          <li>Investigated Fano factor discrepancies between multiple transcription regulatory systems</li>
+          <li>Identified components contributing to high noise triggering unexpected activation/repression in transcription regulatory systems</li>
+          <li>Studied how multiple transcription mechanisms generate strong rhythm and noise robustness in biological oscillators (e.g., circadian rhythm, p53-MDM2)</li>
         </ul>
       </div>
+
       <div class="card">
-        <h3>FX Technical Director Intern — Sony Pictures Imageworks</h3>
-        <div class="meta">Jul 2022 – Aug 2022</div>
+        <h3>FX Technical Director Intern – July 2022 ~ August 2022</h3>
+        <div class="meta">Sony Pictures Imageworks</div>
         <ul>
-          <li>Worked on Netflix film <em>In Your Dreams</em> (2025).</li>
-          <li>Applied vector calculus & linear algebra to particle and fluid simulations; procedural control with Python.</li>
+          <li>Worked on Netflix film “In Your Dreams” (2025)</li>
+          <li>Applied vector calculus and linear algebra to 3D particle and fluid simulations</li>
+          <li>Used Python and proprietary languages for procedural control of fluid dynamics</li>
         </ul>
       </div>
+
       <div class="card">
-        <h3>Research Assistant — Korea Institute of Science and Technology Information (KISTI)</h3>
-        <div class="meta">Sep 2020 – Dec 2020</div>
-        <ul><li>Global market research during COVID-19; analysis of mask overproduction/waste.</li></ul>
+        <h3>Research Assistant – September 2020 ~ December 2020</h3>
+        <div class="meta">Korea Institute of Science and Technology Information</div>
+        <ul>
+          <li>Assisted global market research projects during COVID19</li>
+          <li>Worked on projects analyzing overproduction and waste of facial masks</li>
+          <li>Collection of data, report write-ups, and creation of presentation materials</li>
+          <li>Used Python for big data processing, and organization</li>
+        </ul>
+      </div>
+
+      <div class="subheading">TEACHING EXPERIENCES</div>
+
+      <div class="card">
+        <h3>Calculus and Linear Algebra Tutor – June 2023 ~ September 2023</h3>
+        <ul>
+          <li>Tutored first-year undergraduate students</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>English Tutor – February 2021 ~ November 2021</h3>
+        <ul>
+          <li>Tutored contemporary English to Korean students</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===== Projects ===== -->
+    <!-- ===== Publications & Preprints (verbatim) ===== -->
+    <section id="publications" class="section">
+      <h2>PUBLICATIONS & PREPRINTS</h2>
+      <div class="card">
+        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2025</h3>
+        <ul>
+          <li>Authors: Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung KimY (*First Author, YCorresponding Author)</li>
+          <li>Preprint available on bioRxiv, currently under review at PLOS Computational Biology</li>
+          <li><a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Research & Projects (verbatim) ===== -->
     <section id="projects" class="section">
-      <h2>Research & Projects</h2>
-      <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</h3><div class="meta">IBS BIMAG · 2024–2025</div><ul><li>Presented at IBS BIMAG Winter 2024 Workshop.</li></ul></div>
-      <div class="card"><h3>Validity of Stochastic Quasi-Steady State Approximation</h3><div class="meta">Université de Montréal · 2025 (ongoing)</div><ul><li>Analysis of QSSA techniques in complex stochastic biological models.</li></ul></div>
-      <div class="card"><h3>Parameter Estimation from Spatiotemporal PDE Tumor Simulations</h3><div class="meta">Université de Montréal · 2025 (ongoing)</div><ul><li>Dimensionality reduction & supervised classification for sequenced 2D data.</li></ul></div>
-      <div class="card"><h3>Cell Division and Its Stochastic Model</h3><div class="meta">University of Alberta · 2024</div></div>
-      <div class="card"><h3>Netflix 3D Animation Film “In Your Dreams”</h3><div class="meta">Sony Pictures Imageworks · 2022</div><ul><li>FX TD intern; particle & fluid dynamics simulation.</li></ul></div>
+      <h2>RESEARCH & PROJECTS</h2>
+
+      <div class="card">
+        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2024 ~ 2025</h3>
+        <ul>
+          <li>Conducted at Biomedical Mathematics Group (BIMAG) in the Institute of Basic Science (IBS)</li>
+          <li>Presented at IBS Biomedical Mathematics Group Winter 2024 Workshop</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Validity of Stochastic Quasi-Steady State Approximation, 2025</h3>
+        <ul>
+          <li>Currently in Progress (Université de Montréal Project)</li>
+          <li>Analysis of Quasi-Steady State Approximation techniques in complex stochastic biological models</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>A Supervised Classification Approach to Parameter Estimation in Spatial-Temporal Partial Differential Equations Modelling of Tumor Growth, 2025</h3>
+        <ul>
+          <li>Currently in Progress (Université de Montréal Project)</li>
+          <li>Dimensionality reduction, classification and parameter estimation of sequenced spatial-temporal data</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Cell Division and its Stochastic Model, 2024</h3>
+        <ul>
+          <li>University of Alberta Coursework Project</li>
+          <li>Development and analysis of cell division stochastic model</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Netflix 3D Animation Film, “In Your Dreams”, 2022</h3>
+        <ul>
+          <li>FX Technical Director intern, particle/fluid dynamics simulation using mathematical and computational skills</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- ===== Presentations ===== -->
+    <!-- ===== Presentations (verbatim) ===== -->
     <section id="presentations" class="section">
-      <h2>Presentations</h2>
-      <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</h3><div class="meta">IBS BIMAG Winter Workshop 2024 · Jeonju, South Korea</div></div>
-      <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</h3><div class="meta">Morgan Craig Lab Meeting · Montréal, Canada (2025 expected)</div></div>
-      <div class="card"><h3>Cell Division and Its Stochastic Model</h3><div class="meta">Mathematical Modelling in Biology · University of Alberta (2024)</div></div>
+      <h2>PRESENTATIONS</h2>
+
+      <div class="card">
+        <h3>“How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”</h3>
+        <ul>
+          <li>IBS Biomedical Mathematics Group Winter Workshop 2024, Jeonju, South Korea, 2024</li>
+          <li>Morgan Craig Lab Meeting, Montréal, Canada [2025; expected]</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>“Cell Division and its Stochastic Model”</h3>
+        <ul>
+          <li>Mathematical Modelling in Biology Presentation, University of Alberta, 2024</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- ===== Honors ===== -->
+    <!-- ===== Honors & Awards (verbatim) ===== -->
     <section id="honors" class="section">
-      <h2>Honors & Awards</h2>
+      <h2>HONORS & AWARDS</h2>
       <div class="honor-grid">
-        <div class="card"><h3>Bourse d’exemption UdeM</h3><div class="meta">Université de Montréal · 2025</div></div>
-        <div class="card"><h3>Graduation with Distinction</h3><div class="meta">University of Alberta · 2024</div></div>
-        <div class="card"><h3>Dean’s Honor Roll</h3><div class="meta">University of Alberta · 2024</div></div>
-        <div class="card"><h3>Undergraduate Leadership Award</h3><div class="meta">University of Alberta · 2022, 2023</div></div>
-        <div class="card"><h3>Academic/Achievement Scholarship</h3><div class="meta">Savannah College of Art and Design · 2018</div></div>
+        <div class="card"><h3>Bourse d’exemption UdeM</h3><div class="meta">Université de Montréal, 2025</div></div>
+        <div class="card"><h3>Graduation with Distinction</h3><div class="meta">University of Alberta, 2024</div></div>
+        <div class="card"><h3>Dean’s Honor Roll</h3><div class="meta">University of Alberta, 2024</div></div>
+        <div class="card"><h3>Undergraduate Leadership Award</h3><div class="meta">University of Alberta, 2023</div></div>
+        <div class="card"><h3>Undergraduate Leadership Award</h3><div class="meta">University of Alberta, 2022</div></div>
+        <div class="card"><h3>Academic / Achievement Scholarship</h3><div class="meta">Savannah College of Art and Design, 2018</div></div>
       </div>
     </section>
   </main>
