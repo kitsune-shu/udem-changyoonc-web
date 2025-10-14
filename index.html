@@ -19,23 +19,18 @@
       --shadow:0 0 20px rgba(92,174,255,0.2);
     }
 
-    /* === Background setup === */
-    html {
-      background: url('background_2.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    body {
+    html, body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: transparent; /* use html background */
+      padding: 0;
+      height: 100%;
       color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height: 1.6;
-      position: relative;
       overflow-x: hidden;
+      position: relative;
     }
 
-    /* === Overlay blur for readability === */
+    /* ===== Background (Works on Mobile) ===== */
     body::before {
       content: "";
       position: fixed;
@@ -43,9 +38,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: -1;
+      background: url('background_2.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(6px);
+      z-index: -1;
     }
 
     header {
@@ -69,16 +76,13 @@
     }
 
     nav strong { font-size: 18px; color: var(--accent-light); }
-
     nav .links { display: flex; gap: 20px; flex-wrap: wrap; }
-
     nav a {
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
       color: var(--accent-light);
       text-shadow: 0 0 8px rgba(92,174,255,0.8);
@@ -86,7 +90,7 @@
 
     .section { max-width: 1100px; margin: 60px auto; padding: 0 24px; }
 
-    /* ===== Unified Profile Box ===== */
+    /* ===== Profile Box ===== */
     .profile-box {
       display: flex;
       align-items: stretch;
@@ -99,20 +103,12 @@
       backdrop-filter: blur(6px);
       transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
     }
-
     .profile-box:hover {
       border: 1px solid var(--accent-light);
       box-shadow: 0 0 25px rgba(92,174,255,0.35);
       transform: translateY(-8px);
     }
-
-    .profile-photo {
-      flex: 0 0 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
+    .profile-photo { flex: 0 0 280px; display: flex; align-items: center; justify-content: center; }
     .profile-photo img {
       width: 260px;
       height: 380px;
@@ -122,49 +118,26 @@
       box-shadow: 0 0 22px rgba(92,174,255,0.45);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .profile-photo img:hover {
       transform: scale(1.03);
       box-shadow: 0 0 35px rgba(92,174,255,0.75);
     }
 
-    .profile-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
+    .profile-content { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .profile-header h1 {
       font-size: 32px;
       margin: 0;
       color: var(--accent-light);
       text-shadow: 0 0 8px rgba(92,174,255,0.4);
     }
+    .profile-header p { color: var(--muted); margin-top: 8px; font-size: 17px; }
 
-    .profile-header p {
-      color: var(--muted);
-      margin-top: 8px;
-      font-size: 17px;
-    }
-
-    .interests {
-      margin-top: 16px;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
+    .interests { margin-top: 16px; padding-left: 20px; color: var(--muted); }
     .education-list { margin-top: 24px; }
     .education-list h3 { color: var(--accent-light); margin-bottom: 6px; }
     .education-list ul { margin: 0; padding-left: 20px; color: var(--muted); }
 
-    .btns {
-      margin-top: 24px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
+    .btns { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       display: inline-block;
       padding: 10px 18px;
@@ -177,11 +150,7 @@
       transition: all 0.3s ease;
       box-shadow: 0 0 12px rgba(92,174,255,0.4);
     }
-
-    .btn:hover {
-      background: var(--accent-light);
-      box-shadow: 0 0 18px rgba(92,174,255,0.6);
-    }
+    .btn:hover { background: var(--accent-light); box-shadow: 0 0 18px rgba(92,174,255,0.6); }
 
     /* ===== Cards ===== */
     .card {
@@ -194,20 +163,13 @@
       transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
       backdrop-filter: blur(6px);
     }
-
     .card:hover {
       border: 1px solid var(--accent-light);
       box-shadow: 0 0 25px rgba(92,174,255,0.35);
       transform: translateY(-4px);
     }
 
-    h2 {
-      color: var(--accent-light);
-      font-size: 26px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(92,174,255,0.3);
-    }
-
+    h2 { color: var(--accent-light); font-size: 26px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(92,174,255,0.3); }
     .subheading {
       margin: 28px 0 12px;
       font-weight: 700;
@@ -215,10 +177,8 @@
       letter-spacing: .02em;
       text-shadow: 0 0 8px rgba(92,174,255,0.25);
     }
-
     .card h3 { color: var(--accent-light); margin-top: 0; }
     .meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
-
     .honor-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -239,44 +199,21 @@
     a { color: var(--accent-light); }
     a:hover { color: #fff; text-shadow: 0 0 8px rgba(92,174,255,0.8); }
 
-    /* ===== Responsive Fix for Mobile Background ===== */
+    /* ===== Responsive (mobile-friendly) ===== */
     @media (max-width: 900px) {
-      html {
-        background: url('background.jpg') no-repeat center center;
-        background-size: cover;
-        background-attachment: scroll;
-      }
-      body { background: none; }
-
       .profile-box {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 24px;
       }
-
-      .profile-photo {
-        flex: none;
-        margin-bottom: 24px;
-      }
-
+      .profile-photo { flex: none; margin-bottom: 24px; }
       .profile-photo img { width: 220px; height: 320px; }
-
       .profile-content { align-items: center; }
-
-      .interests, .education-list ul {
-        padding-left: 0;
-        list-style-position: inside;
-      }
-
+      .interests, .education-list ul { padding-left: 0; list-style-position: inside; }
       .btns { justify-content: center; }
       h2 { text-align: center; }
-
-      nav .links {
-        justify-content: center;
-        width: 100%;
-        margin-top: 8px;
-      }
+      nav .links { justify-content: center; width: 100%; margin-top: 8px; }
     }
 
     @media (max-width: 600px) {
@@ -305,12 +242,10 @@
   </header>
 
   <main>
-    <!-- ===== About Section (unchanged structure; your text) ===== -->
+    <!-- ===== About Section ===== -->
     <section id="about" class="section">
       <div class="profile-box">
-        <div class="profile-photo">
-          <img src="profile.JPG" alt="Profile Photo" />
-        </div>
+        <div class="profile-photo"><img src="profile.JPG" alt="Profile Photo" /></div>
         <div class="profile-content">
           <div class="profile-header">
             <h1>Chang Yoon (Yoon) Chung</h1>
@@ -343,7 +278,7 @@
       </div>
     </section>
 
-    <!-- ===== Experience with subheadings (verbatim text) ===== -->
+    <!-- ===== Experience ===== -->
     <section id="experience" class="section">
       <h2>Experience</h2>
 
@@ -397,97 +332,46 @@
 
       <div class="card">
         <h3>Calculus and Linear Algebra Tutor – June 2023 ~ September 2023</h3>
-        <ul>
-          <li>Tutored first-year undergraduate students</li>
-        </ul>
+        <ul><li>Tutored first-year undergraduate students</li></ul>
       </div>
 
       <div class="card">
         <h3>English Tutor – February 2021 ~ November 2021</h3>
-        <ul>
-          <li>Tutored contemporary English to Korean students</li>
-        </ul>
+        <ul><li>Tutored contemporary English to Korean students</li></ul>
       </div>
     </section>
 
-    <!-- ===== Publications & Preprints (verbatim) ===== -->
+    <!-- ===== Publications ===== -->
     <section id="publications" class="section">
       <h2>PUBLICATIONS & PREPRINTS</h2>
       <div class="card">
         <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2025</h3>
         <ul>
-          <li>Authors: Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung KimY (*First Author, YCorresponding Author)</li>
+          <li>Authors: Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung Kim^ (*First Author, ^Corresponding Author)</li>
           <li>Preprint available on bioRxiv, currently under review at PLOS Computational Biology</li>
           <li><a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1</a></li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== Research & Projects (verbatim) ===== -->
+    <!-- ===== Projects ===== -->
     <section id="projects" class="section">
       <h2>RESEARCH & PROJECTS</h2>
-
-      <div class="card">
-        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2024 ~ 2025</h3>
-        <ul>
-          <li>Conducted at Biomedical Mathematics Group (BIMAG) in the Institute of Basic Science (IBS)</li>
-          <li>Presented at IBS Biomedical Mathematics Group Winter 2024 Workshop</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Validity of Stochastic Quasi-Steady State Approximation, 2025</h3>
-        <ul>
-          <li>Currently in Progress (Université de Montréal Project)</li>
-          <li>Analysis of Quasi-Steady State Approximation techniques in complex stochastic biological models</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>A Supervised Classification Approach to Parameter Estimation in Spatial-Temporal Partial Differential Equations Modelling of Tumor Growth, 2025</h3>
-        <ul>
-          <li>Currently in Progress (Université de Montréal Project)</li>
-          <li>Dimensionality reduction, classification and parameter estimation of sequenced spatial-temporal data</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Cell Division and its Stochastic Model, 2024</h3>
-        <ul>
-          <li>University of Alberta Coursework Project</li>
-          <li>Development and analysis of cell division stochastic model</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Netflix 3D Animation Film, “In Your Dreams”, 2022</h3>
-        <ul>
-          <li>FX Technical Director intern, particle/fluid dynamics simulation using mathematical and computational skills</li>
-        </ul>
-      </div>
+      <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2024 ~ 2025</h3><ul><li>Conducted at Biomedical Mathematics Group (BIMAG) in the Institute of Basic Science (IBS)</li><li>Presented at IBS Biomedical Mathematics Group Winter 2024 Workshop</li></ul></div>
+      <div class="card"><h3>Validity of Stochastic Quasi-Steady State Approximation, 2025</h3><ul><li>Currently in Progress (Université de Montréal Project)</li><li>Analysis of Quasi-Steady State Approximation techniques in complex stochastic biological models</li></ul></div>
+      <div class="card"><h3>A Supervised Classification Approach to Parameter Estimation in Spatial-Temporal Partial Differential Equations Modelling of Tumor Growth, 2025</h3><ul><li>Currently in Progress (Université de Montréal Project)</li><li>Dimensionality reduction, classification and parameter estimation of sequenced spatial-temporal data</li></ul></div>
+      <div class="card"><h3>Cell Division and its Stochastic Model, 2024</h3><ul><li>University of Alberta Coursework Project</li><li>Development and analysis of cell division stochastic model</li></ul></div>
+      <div class="card"><h3>Netflix 3D Animation Film, “In Your Dreams”, 2022</h3><ul><li>FX Technical Director intern, particle/fluid dynamics simulation using mathematical and computational skills</li></ul></div>
     </section>
 
-    <!-- ===== Presentations (verbatim) ===== -->
+    <!-- ===== Presentations ===== -->
     <section id="presentations" class="section">
       <h2>PRESENTATIONS</h2>
-
-      <div class="card">
-        <h3>“How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”</h3>
-        <ul>
-          <li>IBS Biomedical Mathematics Group Winter Workshop 2024, Jeonju, South Korea, 2024</li>
-          <li>Morgan Craig Lab Meeting, Montréal, Canada [2025; expected]</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>“Cell Division and its Stochastic Model”</h3>
-        <ul>
-          <li>Mathematical Modelling in Biology Presentation, University of Alberta, 2024</li>
-        </ul>
-      </div>
+      <div class="card"><h3>“How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”</h3><ul><li>IBS Biomedical Mathematics Group Winter Workshop 2024, Jeonju, South Korea, 2024</li><li>Morgan Craig Lab Meeting, Montréal, Canada [2025; expected]</li></ul></div>
+      <div class="card"><h3>“Cell Division and its Stochastic Model”</h3><ul><li>Mathematical Modelling in Biology Presentation, University of Alberta, 2024</li></ul></div>
     </section>
 
-    <!-- ===== Honors & Awards (verbatim) ===== -->
+    <!-- ===== Honors ===== -->
     <section id="honors" class="section">
       <h2>HONORS & AWARDS</h2>
       <div class="honor-grid">
@@ -505,3 +389,4 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
