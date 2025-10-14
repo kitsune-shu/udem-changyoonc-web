@@ -28,9 +28,10 @@
       line-height: 1.6;
       overflow-x: hidden;
       position: relative;
-      z-index: 0;
+      background-color: var(--bg);
     }
 
+    /* ✅ Flicker-free, scrollable background */
     body::before {
       content: "";
       position: absolute;
@@ -51,14 +52,16 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(11px);
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       z-index: -1;
     }
 
     header {
       background: rgba(10, 10, 14, 0.85);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -82,6 +85,11 @@
       color: var(--text);
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent-light);
+      text-shadow: 0 0 8px rgba(92,174,255,0.8);
     }
 
     .section { max-width: 1100px; margin: 60px auto; padding: 0 24px; }
@@ -96,6 +104,12 @@
       box-shadow: var(--shadow);
       padding: 40px;
       backdrop-filter: blur(6px);
+      transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    }
+    .profile-box:hover {
+      border: 1px solid var(--accent-light);
+      box-shadow: 0 0 25px rgba(92,174,255,0.35);
+      transform: translateY(-8px);
     }
 
     .profile-photo { flex: 0 0 280px; display: flex; align-items: center; justify-content: center; }
@@ -106,6 +120,11 @@
       border-radius: 10px;
       border: 2px solid var(--accent);
       box-shadow: 0 0 22px rgba(92,174,255,0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-photo img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(92,174,255,0.75);
     }
 
     .profile-content { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
@@ -132,17 +151,24 @@
       text-decoration: none;
       font-weight: 600;
       border: 1px solid var(--accent-light);
+      transition: all 0.3s ease;
       box-shadow: 0 0 12px rgba(92,174,255,0.4);
     }
+    .btn:hover { background: var(--accent-light); box-shadow: 0 0 18px rgba(92,174,255,0.6); }
 
     .card {
       background: var(--card);
       border-radius: 12px;
       border: 1px solid var(--border);
-      box-shadow: 0 0 15px rgba(92,174,255,0.2);
+      box-shadow: 0 0 15px rgba(92,174,255,0.15);
       padding: 20px 24px;
       margin-bottom: 20px;
       backdrop-filter: blur(6px);
+    }
+    .card:hover {
+      border: 1px solid var(--accent-light);
+      box-shadow: 0 0 25px rgba(92,174,255,0.35);
+      transform: translateY(-4px);
     }
 
     h2 { color: var(--accent-light); font-size: 26px; margin-bottom: 20px; text-shadow: 0 0 10px rgba(92,174,255,0.3); }
@@ -174,14 +200,11 @@
     }
 
     a { color: var(--accent-light); }
+    a:hover { color: #fff; text-shadow: 0 0 8px rgba(92,174,255,0.8); }
 
     @media (max-width: 900px) {
-      .profile-box {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 24px;
-      }
+      body::before, body::after { position: absolute; background-attachment: scroll; }
+      .profile-box { flex-direction: column; align-items: center; text-align: center; padding: 24px; }
       .profile-photo { flex: none; margin-bottom: 24px; }
       .profile-photo img { width: 220px; height: 320px; }
       .profile-content { align-items: center; }
@@ -207,8 +230,8 @@
       <strong>Yoon Chung</strong>
       <div class="links">
         <a href="#about">About</a>
-        <a href="#experience">Experience</a>
         <a href="#publications">Publications & Preprints</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Research & Projects</a>
         <a href="#presentations">Presentations</a>
         <a href="#honors">Honors & Awards</a>
@@ -217,6 +240,7 @@
   </header>
 
   <main>
+    <!-- === About === -->
     <section id="about" class="section">
       <div class="profile-box">
         <div class="profile-photo"><img src="profile.JPG" alt="Profile Photo" /></div>
@@ -252,6 +276,7 @@
       </div>
     </section>
 
+    <!-- === Publications === -->
     <section id="publications" class="section">
       <h2>PUBLICATIONS & PREPRINTS</h2>
       <div class="card">
@@ -264,11 +289,11 @@
       </div>
     </section>
 
+    <!-- === Experience === -->
     <section id="experience" class="section">
       <h2>Experience</h2>
 
       <div class="subheading">PROFESSIONAL EXPERIENCES</div>
-
       <div class="card">
         <h3>MSc Candidate; Graduate student Researcher – August 2025 ~ Present</h3>
         <div class="meta">Université de Montréal</div>
@@ -314,18 +339,17 @@
       </div>
 
       <div class="subheading">TEACHING EXPERIENCES</div>
-
       <div class="card">
         <h3>Calculus and Linear Algebra Tutor – June 2023 ~ September 2023</h3>
         <ul><li>Tutored first-year undergraduate students</li></ul>
       </div>
-
       <div class="card">
         <h3>English Tutor – February 2021 ~ November 2021</h3>
         <ul><li>Tutored contemporary English to Korean students</li></ul>
       </div>
     </section>
 
+    <!-- === Projects === -->
     <section id="projects" class="section">
       <h2>RESEARCH & PROJECTS</h2>
       <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses, 2024 ~ 2025</h3><ul><li>Conducted at Biomedical Mathematics Group (BIMAG) in the Institute of Basic Science (IBS)</li><li>Presented at IBS Biomedical Mathematics Group Winter 2024 Workshop</li></ul></div>
@@ -335,12 +359,25 @@
       <div class="card"><h3>Netflix 3D Animation Film, “In Your Dreams”, 2022</h3><ul><li>FX Technical Director intern, particle/fluid dynamics simulation using mathematical and computational skills</li></ul></div>
     </section>
 
+    <!-- === Presentations === -->
     <section id="presentations" class="section">
       <h2>PRESENTATIONS</h2>
-      <div class="card"><h3>“How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”</h3><ul><li>IBS Biomedical Mathematics Group Winter Workshop 2024, Jeonju, South Korea, 2024</li><li>Morgan Craig Lab Meeting, Montréal, Canada [2025; expected]</li></ul></div>
-      <div class="card"><h3>“Cell Division and its Stochastic Model”</h3><ul><li>Mathematical Modelling in Biology Presentation, University of Alberta, 2024</li></ul></div>
+      <div class="card">
+        <h3>“How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses”</h3>
+        <ul>
+          <li>IBS Biomedical Mathematics Group Winter Workshop 2024, Jeonju, South Korea, 2024</li>
+          <li>Morgan Craig Lab Meeting, Montréal, Canada [2025; expected]</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>“Cell Division and its Stochastic Model”</h3>
+        <ul>
+          <li>Mathematical Modelling in Biology Presentation, University of Alberta, 2024</li>
+        </ul>
+      </div>
     </section>
 
+    <!-- === Honors & Awards === -->
     <section id="honors" class="section">
       <h2>HONORS & AWARDS</h2>
       <div class="honor-grid">
