@@ -132,7 +132,6 @@
     }
 
     .edu-card h3 { margin-top: 0; color: var(--text); }
-
     .edu-meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
 
     h2 { color: var(--accent); font-size: 26px; margin-bottom: 20px; }
@@ -147,8 +146,13 @@
     }
 
     .card h3 { margin-top: 0; color: var(--text); }
-
     .meta { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+
+    .honor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
 
     footer {
       text-align: center;
@@ -217,6 +221,15 @@
       </div>
     </section>
 
+    <section id="publications" class="section">
+      <h2>Publications & Preprints</h2>
+      <div class="card">
+        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses (2025)</h3>
+        <div class="meta">Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung Kim (* co-first authors)</div>
+        <p>bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank">10.1101/2025.06.12.659288v1</a> · Under review at PLOS Computational Biology</p>
+      </div>
+    </section>
+
     <section id="experience" class="section">
       <h2>Experience</h2>
       <div class="card">
@@ -254,15 +267,6 @@
       </div>
     </section>
 
-    <section id="publications" class="section">
-      <h2>Publications & Preprints</h2>
-      <div class="card">
-        <h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses (2025)</h3>
-        <div class="meta">Eui Min Jeong*, Chang Yoon Chung*, Jae Kyoung Kim (* co-first authors)</div>
-        <p>bioRxiv: <a href="https://www.biorxiv.org/content/10.1101/2025.06.12.659288v1" target="_blank">10.1101/2025.06.12.659288v1</a> · Under review at PLOS Computational Biology</p>
-      </div>
-    </section>
-
     <section id="projects" class="section">
       <h2>Research & Projects</h2>
       <div class="card"><h3>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</h3><div class="meta">IBS BIMAG · 2024–2025</div><ul><li>Presented at IBS BIMAG Winter 2024 Workshop.</li></ul></div>
@@ -281,11 +285,13 @@
 
     <section id="honors" class="section">
       <h2>Honors & Awards</h2>
-      <div class="card"><h3>Bourse d’exemption UdeM</h3><div class="meta">Université de Montréal · 2025</div></div>
-      <div class="card"><h3>Graduation with Distinction</h3><div class="meta">University of Alberta · 2024</div></div>
-      <div class="card"><h3>Dean’s Honor Roll</h3><div class="meta">University of Alberta · 2024</div></div>
-      <div class="card"><h3>Undergraduate Leadership Award</h3><div class="meta">University of Alberta · 2022, 2023</div></div>
-      <div class="card"><h3>Academic/Achievement Scholarship</h3><div class="meta">Savannah College of Art and Design · 2018</div></div>
+      <div class="honor-grid">
+        <div class="card"><h3>Bourse d’exemption UdeM</h3><div class="meta">Université de Montréal · 2025</div></div>
+        <div class="card"><h3>Graduation with Distinction</h3><div class="meta">University of Alberta · 2024</div></div>
+        <div class="card"><h3>Dean’s Honor Roll</h3><div class="meta">University of Alberta · 2024</div></div>
+        <div class="card"><h3>Undergraduate Leadership Award</h3><div class="meta">University of Alberta · 2022, 2023</div></div>
+        <div class="card"><h3>Academic/Achievement Scholarship</h3><div class="meta">Savannah College of Art and Design · 2018</div></div>
+      </div>
     </section>
   </main>
 
@@ -295,5 +301,4 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
 
