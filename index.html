@@ -71,29 +71,6 @@
       font-size: 2rem;
     }
 
-    .two-col {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-
-    th, td {
-      border: 1px solid var(--border);
-      padding: .5rem 1rem;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f5f5f5;
-      font-weight: 600;
-    }
-
     h2 {
       margin-top: 3rem;
       border-bottom: 2px solid var(--border);
@@ -102,23 +79,6 @@
 
     ul { padding-left: 1.2rem; }
 
-    .news-item { margin-bottom: 1rem; }
-
-    footer {
-      margin-top: 3rem;
-      padding: 2rem;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    @media (max-width: 700px) {
-      .profile-section {
-        text-align: center;
-        justify-content: center;
-      }
-      .profile-photo img { width: 180px; }
-    }
-  
     .news-box {
       background: #f7f9ff;
       border: 1px solid #d6e2ff;
@@ -132,12 +92,8 @@
       color: var(--accent);
     }
     .news-entry { margin-bottom: .4rem; }
-    .subheading {
-      font-weight: 600;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-      .interest-box {
+
+    .interest-box {
       margin-top: 1.5rem;
       padding: 1.5rem;
       border-radius: 12px;
@@ -157,6 +113,13 @@
       color: var(--accent);
     }
 
+    @media (max-width: 700px) {
+      .profile-section {
+        text-align: center;
+        justify-content: center;
+      }
+      .profile-photo img { width: 180px; }
+    }
   </style>
 </head>
 <body>
@@ -168,7 +131,6 @@
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#publications">Publications</a>
-    </div>
     </div>
   </nav>
 </header>
@@ -182,20 +144,18 @@
     <div class="profile-info">
       <h1>Chang Yoon (Yoon) Chung</h1>
       <p><strong>Email:</strong> <a href="mailto:cy.ch0619@gmail.com">cy.ch0619@gmail.com</a></p>
-      
 
       <div class="news-box">
         <div class="news-title">Recent News</div>
-        <div class="news-entry"><strong>2025-09-18:</strong> Manuscript revision for <em>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</em>.</div>
-        <div class="news-entry"><strong>2025-08-01:</strong> Started MSc at Université de Montréal.</div>
+        <div class="news-entry"><strong>2025-11-26:</strong> Successfully presented previous research at Professor Morgan Craig's research group meeting!</div>
+        <div class="news-entry"><strong>2025-11-18:</strong> Major revision for <em>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</em> has been submitted to PLOS Computational Biology.</div>
+        <div class="news-entry"><strong>2025-09-01:</strong> Started MSc at Université de Montréal!</div>
       </div>
+        <p>I am a graduate student working in mathematical and computational biology, focusing on stochastic modeling of gene regulatory systems and the mechanisms that allow biological processes to remain robust under noise.</p>
 
-      <p>I am a graduate student working in mathematical and computational biology, focusing on stochastic modeling of gene regulatory systems and the mechanisms that allow biological processes to remain robust under noise.</p>
+<p>Previously, I studied 3D animation in the United States and later moved to Canada to pursue mathematics. I enjoy interdisciplinary work across mathematics, biology, and data science.</p>
 
-      <p>Previously, I studied 3D animation in the United States and later moved to Canada to study mathematics. I enjoy interdisciplinary work across mathematics, biology, and computation.</p>
-
-      
-    <div class="interest-box">
+<div class="interest-box">
       <div class="interest-column">
         <div class="interest-title">Research Interests</div>
         <ul>
@@ -217,11 +177,10 @@
     </div>
 
     </div>
-
-    </div>
   </div>
 </div>
 
+<div class="container">
   <h2 id="education">Education</h2>
   <ul>
     <li><strong>Université de Montréal (2025–2027)</strong><br>MSc in Applied Mathematics</li>
@@ -239,9 +198,8 @@
   <h2 id="publications">Publications & Preprints</h2>
   <ul>
     <li><strong>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</strong> (2025)<br>
-      E. M. Jeong*, C. Y. Chung*, J. K. Kim (bioRxiv). Under review at PLOS Computational Biology.</li>
+      E. M. Jeong*, C. Y. Chung*, J. K. Kim (bioRxiv). Under review.</li>
   </ul>
-
 </div>
 
 <footer>
