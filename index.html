@@ -137,6 +137,26 @@
       margin-top: 1rem;
       font-size: 1.1rem;
     }
+      .interest-box {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: #f2f6ff;
+      border: 1px solid #c9d8ff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .interest-column {
+      flex: 1 1 220px;
+    }
+    .interest-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
   </style>
 </head>
 <body>
@@ -145,8 +165,9 @@
     <strong>Yoon C.</strong>
     <div>
       <a href="#about">About</a>
-      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
     </div>
     </div>
   </nav>
@@ -160,49 +181,58 @@
 
     <div class="profile-info">
       <h1>Chang Yoon (Yoon) Chung</h1>
-      <p><strong>Email:</strong> <a href="mailto:chang.yoon.chung@umontreal.ca">chang.yoon.chung@umontreal.ca</a></p>
+      <p><strong>Email:</strong> <a href="mailto:cy.ch0619@gmail.com">cy.ch0619@gmail.com</a></p>
+      
 
-      <p>I am a graduate student working in mathematical and computational biology, focusing on stochastic modeling of gene regulatory systems and the mechanisms that allow biological processes to remain robust in noisy environments.</p>
+      <div class="news-box">
+        <div class="news-title">Recent News</div>
+        <div class="news-entry"><strong>2025-09-18:</strong> Manuscript revision for <em>How Cells Tame Noise While Maintaining Ultrasensitive Transcriptional Responses</em>.</div>
+        <div class="news-entry"><strong>2025-08-01:</strong> Started MSc at Université de Montréal.</div>
+      </div>
 
-      <p>Previously, I studied 3D animation and visual effects in the United States, and later moved to Canada to study mathematics. I enjoy interdisciplinary work across mathematics, biology, and data science.</p>
+      <p>I am a graduate student working in mathematical and computational biology, focusing on stochastic modeling of gene regulatory systems and the mechanisms that allow biological processes to remain robust under noise.</p>
+
+      <p>Before academia, I worked as a 3D animation artist in South Korea and later moved to Canada to pursue mathematics and research full‑time. I enjoy interdisciplinary work across mathematics, biology, and computation.</p>
+
+      
+    <div class="interest-box">
+      <div class="interest-column">
+        <div class="interest-title">Research Interests</div>
+        <ul>
+          <li>Stochastic processes</li>
+          <li>Gene regulation & single-cell modeling</li>
+          <li>Mathematical biology</li>
+          <li>Dynamical systems</li>
+          <li>Computational methods</li>
+        </ul>
+      </div>
+      <div class="interest-column">
+        <div class="interest-title">Non-research Interests</div>
+        <ul>
+          <li>K-Pop (particularly NMIXX)</li>
+          <li>Spacing out</li>
+          <li>Cocktail making</li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+
     </div></div>
-
-  <div class="two-col">
-    <table>
-      <tr><th>Research Interests</th><th>Non‑research-related Interests</th></tr>
-      <tr>
-        <td>
-          • Stochastic processes<br>
-          • Gene regulation, Single-cell<br>
-          • Mathematical Biology<br>
-          • Dynamical systems<br>
-          • Computational methods
-        </td>
-        <td>
-          • Coffee<br>
-          • K-pop (Particularly NMIXX!)<br>
-          • Spacing out<br>
-        </td>
-      </tr>
-    </table>
-  </div>
 
   <h2 id="education">Education</h2>
   <ul>
-    <li><strong>Université de Montréal (2025–2027)</strong><br>MSc in Applied Mathematics - Thesis-based; Fully-Funded </li>
+    <li><strong>Université de Montréal (2025–2027)</strong><br>MSc in Applied Mathematics</li>
     <li><strong>University of Alberta (2021–2024)</strong><br>BSc in Mathematics (Major), Computing Science (Minor)</li>
   </ul>
 
   <h2 id="experience">Experience</h2>
   <ul>
-    <li><strong>MSc Student & Graduate Researcher (2025-present)</strong><br>Université de Montréal</li>
+    <li><strong>MSc Student & Graduate Researcher (2025–present)</strong><br>Université de Montréal</li>
     <li><strong>Undergraduate Researcher (2024–2025)</strong><br>IBS Biomedical Mathematics Group (BIMAG)</li>
-    <li><strong>FX Technical Director Intern (2022)</strong><br>Sony Pictures Imageworks — Worked on Netflix film “In Your Dreams”</li>
+    <li><strong>FX Technical Director Intern (2022)</strong><br>Sony Pictures Imageworks</li>
     <li><strong>Research Assistant (2020)</strong><br>Korea Institute of Science and Technology Information</li>
   </ul>
-
-
-
 
   <h2 id="publications">Publications & Preprints</h2>
   <ul>
@@ -218,7 +248,6 @@
 </body>
 </html>
 
-  <footer>© <span id="year"></span> Chang Yoon (Yoon) Chung</footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
